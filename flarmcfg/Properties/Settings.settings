@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="flarmcfg.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="PNAME" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="CPNAME" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="TPFILE" Type="System.String" Scope="User">
+      <Value Profile="(Default)">TP.csv</Value>
+    </Setting>
+    <Setting Name="GLFILE" Type="System.String" Scope="User">
+      <Value Profile="(Default)">GL.csv</Value>
+    </Setting>
+    <Setting Name="TPName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Short Code</Value>
+    </Setting>
+    <Setting Name="TPDesc" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Full Name</Value>
+    </Setting>
+    <Setting Name="TPCoord" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Lat/Long to WGS84</Value>
+    </Setting>
+    <Setting Name="CSVAUTOLOAD" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
