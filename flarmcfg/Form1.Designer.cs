@@ -60,8 +60,6 @@
             this.comboBox_TPS9 = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.button_UPLOAD = new System.Windows.Forms.Button();
-            this.checkBox_AUTOLOAD = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -336,35 +334,11 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button_UPLOAD
-            // 
-            this.button_UPLOAD.Location = new System.Drawing.Point(630, 114);
-            this.button_UPLOAD.Name = "button_UPLOAD";
-            this.button_UPLOAD.Size = new System.Drawing.Size(170, 34);
-            this.button_UPLOAD.TabIndex = 35;
-            this.button_UPLOAD.Text = "Upload Data Files";
-            this.button_UPLOAD.UseVisualStyleBackColor = true;
-            this.button_UPLOAD.Visible = false;
-            // 
-            // checkBox_AUTOLOAD
-            // 
-            this.checkBox_AUTOLOAD.AutoSize = true;
-            this.checkBox_AUTOLOAD.Location = new System.Drawing.Point(630, 151);
-            this.checkBox_AUTOLOAD.Name = "checkBox_AUTOLOAD";
-            this.checkBox_AUTOLOAD.Size = new System.Drawing.Size(228, 29);
-            this.checkBox_AUTOLOAD.TabIndex = 36;
-            this.checkBox_AUTOLOAD.Text = "Get data files on startup";
-            this.checkBox_AUTOLOAD.UseVisualStyleBackColor = true;
-            this.checkBox_AUTOLOAD.Visible = false;
-            this.checkBox_AUTOLOAD.CheckedChanged += new System.EventHandler(this.checkBox_AUTOLOAD_CheckedChanged);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 789);
-            this.Controls.Add(this.checkBox_AUTOLOAD);
-            this.Controls.Add(this.button_UPLOAD);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox_TPS10);
             this.Controls.Add(this.label15);
@@ -438,7 +412,5 @@
         private ComboBox comboBox_TPS9;
         private Label label16;
         private Button button1;
-        private Button button_UPLOAD;
-        private CheckBox checkBox_AUTOLOAD;
     }
 }

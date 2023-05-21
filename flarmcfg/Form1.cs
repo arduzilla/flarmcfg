@@ -188,9 +188,12 @@ namespace flarmcfg
                     if(textBox_COPILOT.Text.Length > 0) writer.WriteLine("$PFLAC,S,COPIL," + textBox_COPILOT.Text);
                     if (gliders is not null && tpoints is not null)
                     {
-                        writer.WriteLine("$PFLAC,S,GLIDERTYPE," + gliders.Data[comboBox_GLIDER.SelectedIndex][gliders.Dict["TYPE"]]);
-                        writer.WriteLine("$PFLAC,S,GLIDERID," + gliders.Data[comboBox_GLIDER.SelectedIndex][gliders.Dict["REG"]]);
-                        writer.WriteLine("$PFLAC,S,COMPCLASS," + gliders.Data[comboBox_GLIDER.SelectedIndex][gliders.Dict["CLASS"]]);
+                        if (comboBox_GLIDER.SelectedIndex != -1)
+                        {
+                            writer.WriteLine("$PFLAC,S,GLIDERTYPE," + gliders.Data[comboBox_GLIDER.SelectedIndex][gliders.Dict["TYPE"]]);
+                            writer.WriteLine("$PFLAC,S,GLIDERID," + gliders.Data[comboBox_GLIDER.SelectedIndex][gliders.Dict["REG"]]);
+                            writer.WriteLine("$PFLAC,S,COMPCLASS," + gliders.Data[comboBox_GLIDER.SelectedIndex][gliders.Dict["CLASS"]]);
+                        }
                         writer.WriteLine("$PFLAC,S,LOGINT,1");
                         writer.WriteLine("$PFLAC,S,NEWTASK,", textBox_TASKNAME);
                         if (comboBox_TPS1.SelectedIndex == -1) writer.WriteLine(dummyPoint + "TAKEOFF");
@@ -231,16 +234,19 @@ namespace flarmcfg
                          //IsSet((ComboBox)Controls.Find("comboBox_TPS" + (comboCount).ToString(), false)[0]) +
                          IsSet((ComboBox)Controls.Find("comboBox_TPS" + (comboCount - 1).ToString(), false)[0]) +
                          IsSet(textBox_PILOT) + 
-                         IsSet(comboBox_GLIDER) + 
+                         //IsSet(comboBox_GLIDER) + 
                          IsSet(textBox_TASKNAME);
 
-            if (numset == 6)
+            if (numset == 5)
             {
                 // Show the FolderBrowserDialog.
                 DialogResult result = folderBrowserDialog1.ShowDialog();
                 if (result == DialogResult.OK)
                 {
                     saveTask(folderBrowserDialog1.SelectedPath + "\\flarmcfg.txt");
+                    DetailsLabel.Font = new Font(DetailsLabel.Font.FontFamily, DetailsLabel.Font.Size, FontStyle.Bold);
+                    DetailsLabel.ForeColor = Color.DarkGreen;
+                    DetailsLabel.Text = "File saved to:" + folderBrowserDialog1.SelectedPath + "\\flarmcfg.txt";
                     Properties.Settings.Default.CPNAME = textBox_COPILOT.Text;
                     Properties.Settings.Default.PNAME = textBox_PILOT.Text;
                     Properties.Settings.Default.Save();
